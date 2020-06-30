@@ -32,7 +32,10 @@ class App extends React.Component {
         <div className={styles.headerDiv}>
           <h1 className={styles.headerText}>Corona Tracker App </h1>
           <span className={styles.headerTextLink}>
-            a product by <a href="#">Suraj Biswas</a>
+            a product by
+            <a href="https://www.linkedin.com/in/suraj-biswas-824bb4176/">
+              Suraj Biswas
+            </a>
           </span>
         </div>
         <Card data={data} />
