@@ -1,11 +1,40 @@
 import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>this is the app</h1>
-    </div>
-  );
+import { fetchData } from "./API/api";
+import Card from "./components/Card/Card";
+import Chart from "./components/Chart/Chart";
+import SingleCountry from "./components/SingleCountry/SingleCountry";
+import styles from "./App.module.css";
+
+class App extends React.Component {
+  state = {
+    data: {},
+    country: "",
+  };
+
+  async componentDidMount() {
+    const data = await fetchData();
+
+    this.setState({ data });
+  }
+
+  handleCountryChange = async (country) => {
+    const data = await fetchData(country);
+
+    this.setState({ data, country: country });
+  };
+
+  render() {
+    const { data, country } = this.state;
+
+    return (
+      <div className={styles.container}>
+        <Card data={data} />
+        <SingleCountry handleCountryChange={this.handleCountryChange} />
+        <Chart data={data} country={country} />
+      </div>
+    );
+  }
 }
 
 export default App;
