@@ -21,14 +21,14 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(styles.card, styles.infected)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography style={{ color: "blue", fontSize: "2vw" }} gutterBottom>
               Infected
             </Typography>
             <Typography variant="h5" component="h2">
               <CountUp
                 start={0}
                 end={confirmed.value}
-                duration={2.75}
+                duration={1.75}
                 separator=","
               />
             </Typography>
@@ -36,7 +36,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               {new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2" component="p">
-              Number of active cases of COVID-19.
+              Number of People Suffer From COVID-19.
             </Typography>
           </CardContent>
         </Grid>
@@ -48,14 +48,17 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(styles.card, styles.recovered)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography
+              style={{ color: "green", fontSize: "2vw" }}
+              gutterBottom
+            >
               Recovered
             </Typography>
             <Typography variant="h5" component="h2">
               <CountUp
                 start={0}
                 end={recovered.value}
-                duration={2.75}
+                duration={1.75}
                 separator=","
               />
             </Typography>
@@ -63,7 +66,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               {new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2" component="p">
-              Number of recoveries from COVID-19.
+              Number of People Recover from COVID-19.
             </Typography>
           </CardContent>
         </Grid>
@@ -75,14 +78,14 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(styles.card, styles.deaths)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography style={{ color: "red", fontSize: "2vw" }} gutterBottom>
               Deaths
             </Typography>
             <Typography variant="h5" component="h2">
               <CountUp
                 start={0}
                 end={deaths.value}
-                duration={2.75}
+                duration={1.75}
                 separator=","
               />
             </Typography>
@@ -90,7 +93,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               {new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2" component="p">
-              Number of deaths caused by COVID-19.
+              Number of People Died from COVID-19.
             </Typography>
           </CardContent>
         </Grid>

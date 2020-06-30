@@ -29,6 +29,12 @@ class App extends React.Component {
 
     return (
       <div className={styles.container}>
+        <div className={styles.headerDiv}>
+          <h1 className={styles.headerText}>Corona Tracker App </h1>
+          <span className={styles.headerTextLink}>
+            a product by <a href="#">Suraj Biswas</a>
+          </span>
+        </div>
         <Card data={data} />
         <SingleCountry handleCountryChange={this.handleCountryChange} />
         <Chart data={data} country={country} />

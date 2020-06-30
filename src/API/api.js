@@ -2,6 +2,7 @@ import axios from "../axios-config";
 
 export const fetchData = async (country) => {
   let Url;
+  //if don't request with country name it would make get request to the base URL
   if (country) {
     Url = `/countries/${country}`;
   }
@@ -11,7 +12,12 @@ export const fetchData = async (country) => {
       data: { confirmed, recovered, deaths, lastUpdate },
     } = await axios.get(Url);
 
-    return { confirmed, recovered, deaths, lastUpdate };
+    return {
+      confirmed,
+      recovered,
+      deaths,
+      lastUpdate,
+    };
   } catch (error) {
     return error;
   }

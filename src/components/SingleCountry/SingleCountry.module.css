@@ -1,5 +1,7 @@
 .formControl {
   margin: auto;
   width: fit-content;
+  min-width: 20vw;
   margin-bottom: 30px !important;
+  text-align: center;
 }

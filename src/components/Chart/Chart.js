@@ -9,13 +9,13 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState({});
 
   useEffect(() => {
-    const fetchMyAPI = async () => {
+    const fetchDalyDataHelper = async () => {
       const initialDailyData = await fetchDailyData();
 
       setDailyData(initialDailyData);
     };
 
-    fetchMyAPI();
+    fetchDalyDataHelper();
   }, []);
 
   const barChart = confirmed ? (
