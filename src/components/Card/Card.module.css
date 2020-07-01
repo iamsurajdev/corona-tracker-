@@ -11,14 +11,17 @@
 
 .infected {
   border-left: 15px solid rgb(62, 62, 238);
+  border-top: 15px solid rgba(62, 62, 238, 0.699);
 }
 
 .recovered {
   border-left: 15px solid rgb(38, 199, 38);
+  border-top: 15px solid rgba(38, 199, 38, 0.644);
 }
 
 .deaths {
   border-left: 15px solid rgba(221, 22, 22, 0.76);
+  border-top: 15px solid rgba(221, 22, 22, 0.473);
 }
 
 @media only screen and (max-width: 770px) {

@@ -5,7 +5,9 @@ import cx from "classnames";
 
 import styles from "./Card.module.css";
 
-const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
+const CardComponent = ({
+  data: { confirmed, recovered, deaths, lastUpdate },
+}) => {
   if (!confirmed) {
     return "Loading...";
   }
@@ -101,4 +103,4 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     </div>
   );
 };
-export default Info;
+export default CardComponent;
