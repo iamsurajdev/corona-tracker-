@@ -33,7 +33,11 @@ class App extends React.Component {
           <h1 className={styles.headerText}>Corona Tracker App </h1>
           <span className={styles.headerTextLink}>
             a product by
-            <a href="https://www.linkedin.com/in/suraj-biswas-824bb4176/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/suraj-biswas-824bb4176/"
+            >
               Suraj Biswas
             </a>
           </span>
